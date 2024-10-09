@@ -5,7 +5,10 @@ const Page = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-[url('/images/white_bg.png')] bg-cover bg-center   flex ">
-        <div className="2xl:bg-[url('/images/Ellipse_1.png')]  bg-cover bg-no-repeat bg-center w-full 2xl:bg-transparent bg-[#083F46] md:w-[50%] xl:w-[50%] min-h-screen flex justify-end items-center overflow-visible"></div>
+        <div className="  bg-cover bg-no-repeat bg-center w-full    md:w-[55%] xl:w-[55%] min-h-screen flex justify-end items-center overflow-hidden">
+
+          <div className="w-[400vw] h-[140vh]  bg-[rgb(8,63,70)] rounded-tr-[120%] rounded-br-[120%]"></div>
+        </div>
       </div>
       <div className="relative w-screen h-screen  flex ">
         <div className="max-w-[1400px] w-full mx-auto flex-col md:flex-row flex justify-center items-center">
