@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import AuthPage from "@/components/authPageTemplate";
+// import AuthPage from "@/components/authPageTemplate";
 import Button from "@/components/outlineButton";
 import Link from "next/link";
 import Input from "@/components/input";
 import { useAuthentication } from "@/api/useAuthentication";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const [value, setValue] = React.useState({
     email: "",
     password: "",
@@ -46,6 +46,7 @@ const page = () => {
         if (res && res.status === "success") {
           router.push("/login");
         }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError({ ...error, registerError: "Registration failed!" });
       }
@@ -124,4 +125,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

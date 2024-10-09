@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+
 import { useContacts } from "@/api/useContacts";
 import TRow from "@/components/TableRow";
 import Modal from "./messageModal";
@@ -13,7 +13,7 @@ type tableProps = {
   _id: string;
 };
 
-const contactTable = () => {
+const ContactTable = () => {
   const [contacts, setContacts] = useState<tableProps[]>([]);
 
   const [showModal, setShowModal] = useState({
@@ -53,6 +53,7 @@ const contactTable = () => {
         });
         fetchContacts();
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setShowModal({
         state: true,
@@ -121,7 +122,7 @@ const contactTable = () => {
   );
 };
 
-export default contactTable;
+export default ContactTable;
 
 const Thead = () => {
   return (

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -8,7 +9,7 @@ import { useAuthentication } from "@/api/useAuthentication";
 import { useRouter } from "next/navigation";
 import { useAuthContext } from "@/hooks/useAuthContext";
 
-const page = () => {
+const Page = () => {
   const [value, setValue] = React.useState({
     email: "",
     password: "",
@@ -50,6 +51,7 @@ const page = () => {
           dispatch({ type: "LOGIN", payload: res.data.user });
           router.push("/");
         }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError({ ...error, loginError: "Invalid email or password" });
       }
@@ -99,4 +101,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

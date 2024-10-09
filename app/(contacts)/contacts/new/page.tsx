@@ -5,16 +5,16 @@ import { useRouter } from "next/navigation";
 import Input from "@/components/input";
 import { useContacts } from "@/api/useContacts";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
 
-  const [value, setValue] = React.useState({
+  const [value, setValue] = useState({
     email: "",
     fullname: "",
     phone: "",
     gender: "",
   });
-  const [error, setError] = React.useState({
+  const [error, setError] = useState({
     emailError: "",
     phoneError: "",
     fullnameError: "",
@@ -47,10 +47,11 @@ const page = () => {
         if (res && res.status === "success") {
           router.push("/contacts");
         }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError({ ...error, createError: "Failed to create contact" });
       }
-    } 
+    }
   };
 
   const validate = () => {
@@ -128,7 +129,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 type RadioInputProps = {
   gender: string;

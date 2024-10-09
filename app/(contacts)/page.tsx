@@ -3,7 +3,7 @@ import React from "react";
 import Button from "@/components/outlineButton";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   return (
     <div className="w-[90%] h-full flex justify-center items-start px-10 py-16 flex-col">
@@ -25,4 +25,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

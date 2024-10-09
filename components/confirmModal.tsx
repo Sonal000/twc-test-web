@@ -3,7 +3,7 @@ import Button from "@/components/fillButton";
 import ButtonOutline from "@/components/outlineButton";
 
 type messageModalProps = {
-  action: string;
+  action?: string;
   message: string;
   onConfirm: () => void;
   onCancel: () => void;

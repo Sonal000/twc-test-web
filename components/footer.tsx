@@ -5,7 +5,7 @@ import { useAuthentication } from "@/api/useAuthentication";
 import { useRouter } from "next/navigation";
 import { useAuthContext } from "@/hooks/useAuthContext";
 
-const footer = () => {
+const Footer = () => {
   const router = useRouter();
   const { dispatch } = useAuthContext();
   const { logout } = useAuthentication();
@@ -36,4 +36,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;
