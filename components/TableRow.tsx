@@ -70,6 +70,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
             action: "Okay",
           });
         }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError({ ...error, updateError: "Failed to create contact" });
         setShowModal({
@@ -120,7 +121,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
   return (
     <>
       <tr>
-        <td className=" px-4 py-2">
+        <td className="min-w-[8rem] px-4 py-2">
           {value?.gender === "female" ? (
             <Image
               src={"/images/female.png"}
@@ -137,7 +138,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
             ></Image>
           )}
         </td>
-        <td className=" px-4 py-2">
+        <td className="min-w-[8rem] px-4 py-2">
           {edit ? (
             <input
               className="w-full outline-none bg-slate-300 p-1"
@@ -153,7 +154,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
             <p className="text-red-500 text-xs ">{error?.fullnameError}</p>
           )}
         </td>
-        <td className=" px-4 py-2">
+        <td className="min-w-[8rem] px-4 py-2">
           {" "}
           {edit ? (
             <button
@@ -173,7 +174,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
             value?.gender
           )}
         </td>
-        <td className=" px-4 py-2">
+        <td className="min-w-[8rem] px-4 py-2">
           {" "}
           {edit ? (
             <input
@@ -190,7 +191,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
             <p className="text-red-500 text-xs ">{error?.emailError}</p>
           )}
         </td>
-        <td className=" px-4 py-2">
+        <td className="min-w-[8rem] px-4 py-2">
           {" "}
           {edit ? (
             <input
@@ -207,7 +208,7 @@ const TRow = ({ gender, email, phone, fullname, _id ,setShowModal,handleDelete}:
             <p className="text-red-500 text-xs ">{error?.phoneError}</p>
           )}
         </td>
-        <td className=" px-4 py-2 flex justify-center items-center gap-2">
+        <td className="min-w-[8rem] px-4 py-2 flex justify-center items-center gap-2">
           {edit ? (
             <form onSubmit={handleSubmit}>
               <Button title="Save" type="submit" />

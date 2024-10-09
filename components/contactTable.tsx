@@ -128,11 +128,11 @@ const Thead = () => {
   return (
     <thead>
       <tr className="">
-        <th className="px-4 py-2 text-lg text-[#083F46] text-left"></th>
-        <th className="px-4 py-2 text-lg text-[#083F46] text-left">fullname</th>
-        <th className="px-4 py-2 text-lg text-[#083F46] text-left">gender</th>
-        <th className="px-4 py-2 text-lg text-[#083F46] text-left">e-mail</th>
-        <th className="px-4 py-2 text-lg text-[#083F46] text-left">
+        <th className="px-4 min-w-[8rem] py-2 text-lg text-[#083F46] text-left"></th>
+        <th className="px-4 min-w-[8rem] py-2 text-lg text-[#083F46] text-left">fullname</th>
+        <th className="px-4 min-w-[8rem] py-2 text-lg text-[#083F46] text-left">gender</th>
+        <th className="px-4 min-w-[8rem] py-2 text-lg text-[#083F46] text-left">e-mail</th>
+        <th className="px-4 min-w-[8rem] py-2 text-lg text-[#083F46] text-left">
           phone number
         </th>
         <th className="px-4 py-2 text-lg text-[#083F46] text-left"></th>
